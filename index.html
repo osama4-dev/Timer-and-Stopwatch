@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+   
+    <title>Timer And Stopwatch</title>
+
+    <link rel="stylesheet" href="resources\style.css" />
+  </head>
+  <body>
+    <header><h1>Countdown</h1></header>
+    
+
+    <div class="tab">
+      <button class="tablinks" onclick="Countdown(event, 'Timer')">Timer</button>
+      <button class="tablinks" onclick="Countdown(event, 'Stopwatch')">
+        Stopwatch
+      </button>
+    </div>
+
+    <div id="Timer" class="tabcontent">
+     <div class="content">
+      <div class="counter"></div>
+      <input type="integer" id="seconds" placeholder="Seconds">
+      <div class="buttons">
+          <button class="btn start" id="start" value="1" onclick="check(this)">Start</button>
+          <button class="btn start" id="continue" value="1" onclick="check(this)">Continue</button>
+          <button class="btn stop" id="stop" value="0" onclick="check(this)">Stop</button>
+          <button class="btn start" id="ok" onclick="toSubmit()">Submit</button>
+        </div>   
+    
+    </div>
+    </div>
+
+    <div id="Stopwatch" class="tabcontent">
+      <div class="stopwatch">
+
+	<h1 id="timer">00:00.00</h1>
+	<button class ="btn1" id="toggle">Start</button>
+	<button class="btn1" id="reset">Reset</button>
+</div>
+    </div>
+
+    
+    </div>
+
+    <script src="resources\main.js"></script>
+  </body>
+</html>
